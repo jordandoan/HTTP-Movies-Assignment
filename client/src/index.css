@@ -54,12 +54,9 @@ body {
   margin: 1rem auto;
 }
 .save-button {
-  position: absolute;
+  background-color: lightseagreen;
   top: 25px;
   right: 25px;
-  border: 1px solid grey;
-  padding: 5px 10px;
-  background-color: lightseagreen;
 }
 .save-button:hover {
   background-color: green;
@@ -74,4 +71,44 @@ body {
 .movie-warning {
   color: red;
   text-align: center;
+}
+
+.form {
+  margin:auto;
+  width:70%;
+}
+
+.button {
+  position: absolute;
+  border: 1px solid grey;
+  padding: 5px 10px;
+}
+
+.edit-button {
+  top:70px;
+  right:25px;
+  background-color:goldenrod;
+}
+
+.edit-button:hover {
+  background-color:blue;
+}
+
+.delete-button {
+  top: 70px;
+  right: 90px;
+  background-color:red;
+}
+.delete-button:hover {
+  background-color:purple;
+}
+
+.add-movie {
+  border: 1px solid grey;
+  padding: 5px 10px;
+  background-color: greenyellow;
+}
+
+.add-movie:hover {
+  background-color: green;
 }

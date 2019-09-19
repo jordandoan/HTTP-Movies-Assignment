@@ -24,7 +24,7 @@ export default class MovieList extends Component {
   render() {
     return (
       <div className="movie-list">
-        <button onClick={this.addMovie}>Add a Movie!!!</button>
+        <button className="add-movie"onClick={this.addMovie}>Add a Movie!!!</button>
         {this.state.movies.map(movie => (
           <MovieDetails key={movie.id} movie={movie} />
         ))}

@@ -42,19 +42,20 @@ const MovieForm = (props) => {
   }
 
   return (
-    <div>
+    <div className="form">
       <h2>{status} Movie</h2>
       <form onSubmit={(e) => handleSubmit(e)}>
         {err && <p>{err}</p>}
         <div>Title <input type="text" name="title" value={movie.title} onChange={(e) => handleChange(e)}/></div>
         <div>Director <input type="text" name="director" value={movie.director} onChange={(e) => handleChange(e)} /></div>
         <div>Metascore: <input type="text" name="metascore" value={movie.metascore} onChange={(e) => handleChange(e)} /></div>
-        <div>Stars: {movie.stars.map((star, idx) => 
-          <div key={idx}>
-            <input type="text" name='stars' value={star} onChange={(e) => handleArrChange(e, idx)}/>
-          </div> 
-        )}
+        <div>Stars: 
           <button onClick={(e) => addStar(e)}>Add Star</button>
+          {movie.stars.map((star, idx) => 
+            <div key={idx}>
+              <input type="text" name='stars' value={star} onChange={(e) => handleArrChange(e, idx)}/>
+            </div> 
+          )}
         </div>
         <button>{status} Movie</button>
       </form>
