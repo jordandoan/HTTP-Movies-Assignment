@@ -23,8 +23,9 @@ const EditForm = (props) => {
   const handleSubmit = event => {
     event.preventDefault();
     axios.put(`http://localhost:5000/api/movies/${id}`, movie)
-      .then(props.history.push(`/movies/${id}`));
+      .then(res => props.history.push(`/movies`));
   }
+
   return (
     <div>
       <h2>Edit Movie</h2>
@@ -34,7 +35,7 @@ const EditForm = (props) => {
         <div>Metascore: <input type="text" name="metascore" value={movie.metascore} onChange={(e) => handleChange(e)} /></div>
         <div>Stars: {movie.stars.map((star, idx) => 
           <div key={idx}>
-            <input type="text" name='stars[{idx}]' value={star} onChange={(e) => handleArrChange(e, idx)}/>
+            <input type="text" name='stars' value={star} onChange={(e) => handleArrChange(e, idx)}/>
           </div> 
         )}
         </div>
